@@ -11,17 +11,21 @@
         <main>
             <section>
                 <h2>Cadastre seu curriculo</h2>
-                <form action="#" method="post">
+                <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
                     <p>Preencha o formulário abaixo para se candidatar à vaga</p>
                     <fieldset>
                         <legend>Dados pessoais</legend>
+                        <div>
+                            <label for="foto_id">Foto:</label>
+                           <input id="foto_id" name="foto" type="file" accecpt="image/*"> 
+                        </div>
                     <div> 
                         <label for="nome_id">Nome completo:</label>
-                        <input name="nome" type="text">
+                        <input name="nome" type="text" placeholder="Beatriz Monteiro">
                     </div> 
                     <div>  
                         <label for="telefone_id">Telefone:</label>
-                        <input name="telefone" type="tel">
+                        <input name="telefone" type="tel" required>
                     </div> 
                     <div>
                         <label for="email_id">E-mail:</label>
@@ -57,7 +61,7 @@
                             <label for="resumo_id">Fale sobre você :</label>
                             <textarea id="resumo_id" name="resumo" rows="4" cols="50"></textarea>
                         </div>
-                        <fieldset>
+                        <fieldset> 
                             <legend>Nível desejado</legend>
                             <div>
                                 <input id="nivel_estagio_id" name="nivel" type="radio" value="estagio">
